@@ -1,11 +1,9 @@
 {
   "name": "@saas-buildkit/nestjs-i18n",
-  "version": "11.1.3",
+  "version": "0.0.1",
+  "homepage": "https://nestjs-i18n.com",
   "description": "The i18n module for Nest.",
-  "license": "MIT",
-  "engines": {
-    "node": ">=16"
-  },
+  "author": "Toon van Strijp",
   "keywords": [
     "nestjs",
     "i18n",
@@ -14,17 +12,20 @@
     "internationalize",
     "internationalise",
     "international",
-    "internationalize",
-    "internationalise",
     "locale"
   ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=16"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/saas-buildkit/nestjs-i18n.git"
+    "url": "https://github.com/ToonvanStrijp/nestjs-i18n"
   },
   "bin": {
     "nestjs-i18n": "./dist/cli.js"
   },
+  "module": "./index.mjs",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [

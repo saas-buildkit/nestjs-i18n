@@ -23,9 +23,7 @@ export class VersionCommand implements yargs.CommandModule {
     const localNpmList = await VersionCommand.executeCommand(
       'npm list --depth=0',
     );
-    const localMatches = localNpmList.match(
-      / saas-buildkit\/nestjs-i18n@(.*)\n/,
-    );
+    const localMatches = localNpmList.match(/ nestjs-i18n@(.*)\n/);
     const localNpmVersion = (
       localMatches && localMatches[1] ? localMatches[1] : ''
     )
@@ -35,9 +33,7 @@ export class VersionCommand implements yargs.CommandModule {
     const globalNpmList = await VersionCommand.executeCommand(
       'npm list -g --depth=0',
     );
-    const globalMatches = globalNpmList.match(
-      / saas-buildkit\/nestjs-i18n@(.*)\n/,
-    );
+    const globalMatches = globalNpmList.match(/ nestjs-i18n@(.*)\n/);
     const globalNpmVersion = (
       globalMatches && globalMatches[1] ? globalMatches[1] : ''
     )
@@ -47,10 +43,10 @@ export class VersionCommand implements yargs.CommandModule {
     if (localNpmVersion) {
       console.log('Local installed version:', localNpmVersion);
     } else {
-      console.log('No local installed TypeORM was found.');
+      console.log('No local installed was found.');
     }
     if (globalNpmVersion) {
-      console.log('Global installed TypeORM version:', globalNpmVersion);
+      console.log('Global installed i18n module version:', globalNpmVersion);
     } else {
       console.log('No global installed was found.');
     }
